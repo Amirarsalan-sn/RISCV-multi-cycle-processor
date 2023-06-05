@@ -28,5 +28,10 @@ You can also see the extended schematic of data path :
 all the components shown is in the picture below which states an abstraction scheme of our multi-cycles RISCV processor:
 ![Abstraction image](images/extended/luiDataPath.png)
 ## The control unit module:
+This is the basic version of control unit:
 ![The control unit](images/multi5(controller).png)
+And the basic version of Finite State Machine:
+And this one is the extended one:
+![Extended one](images/extended/control_unit_extended.png)
+What happened ? Well, In order
 As you can see, the controller module has a finite state machine because it is a multi-cycle processor you can see the state machine code [here](fsm.sv)
