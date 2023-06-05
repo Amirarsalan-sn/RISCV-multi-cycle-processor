@@ -31,7 +31,10 @@ all the components shown is in the picture below which states an abstraction sch
 This is the basic version of control unit:
 ![The control unit](images/multi5(controller).png)
 And the basic version of Finite State Machine:
-And this one is the extended one:
-![Extended one](images/extended/control_unit_extended.png)
-What happened ? Well, In order
+![The basic version](images/basic_fsm.png)
+And these are the extended one:
+![Extended control unit](images/extended/control_unit_extended.png)
+![Exended fsm](images/extended/state_machine_final_extention.png)
+What happened ? Well, In order to add lui, auipc and jali instructions it was neccesary to change the FSM as stated in the picture.
+But in order to add other branch instructions like bge, bne etc., it was not neccesary to change the FSM instead, we could add another module (aka branch decoder), which decodes the branch type acording to the fetched instruction. using this new module and flages that is set by the alu the next pc logic can figure out whether to branch or not to branch.
 As you can see, the controller module has a finite state machine because it is a multi-cycle processor you can see the state machine code [here](fsm.sv)
