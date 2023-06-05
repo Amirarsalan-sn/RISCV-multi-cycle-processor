@@ -6,7 +6,7 @@ First of all, let us take a look at the code, and the schematics of the processo
 This picture represents the top module of RISC-V processor which contains a memory block, and the processor itself and the picture belwo is SystemVerilog code for
 this module:
 ![SystemVerilog code of top module](/images/top.png)
-You can see the memory code in memory.sv file.
+You can see the memory code in [memory.sv](memory.sv) file.
 Now lets dive deeper and see the contents of the processor itself:
 ## The RISC-V processor module:
 ![The RISC-V processor module schematic](/images/multi3.png)
@@ -20,3 +20,5 @@ The Data path module contains register file, alu, extend unit, next pc register,
 ![Abstraction image](images/extended/luiDataPath.png)
 ![Data Path code 1](images/datapath1.png)
 ![Data Path code 2](images/datapath2.png)
+These pictures are representing the basic version of the processor. The basic version does not have lui command(and some other commands) so it doesn't need to have a 4 input multiplexer. But in extended version we need to add a 4 input multiplexer to the DataPath and add some changes to ALU and other components as well, the codes that are presented in this repository are codes of extended version so you don't need to worry about it.
+[flopenr](flopenr.sv), [flopr](flopr.sv), [regFile](regFile.sv), [extend unit](extend.sv), [3 input multiplexer](mux3.sv), [4 input result mux](mux4.sv), [2 input mux](mux2.sv), [alu](alu.sv).
