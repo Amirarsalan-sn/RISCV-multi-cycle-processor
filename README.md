@@ -37,4 +37,16 @@ And these are the extended one:
 ![Exended fsm](images/extended/state_machine_final_extention.png)
 What happened ? Well, In order to add lui, auipc and jali instructions it was neccesary to change the FSM as stated in the picture.
 But in order to add other branch instructions like bge, bne etc., it was not neccesary to change the FSM instead, we could add another module (aka branch decoder), which decodes the branch type acording to the fetched instruction. using this new module and flages that is set by the alu the next pc logic can figure out whether to branch or not to branch.
-As you can see, the controller module has a finite state machine because it is a multi-cycle processor you can see the state machine code [here](fsm.sv)
+As you can see, the controller module has a finite state machine because it is a multi-cycle processor you can see the state machine code [here](fsm.sv).
+This, was the description about the codes and shcematics, know it is time to see the test results:
+## Test:
+Each part of the processor has been tested independently(the codes and results are presented in this repo and you can investigate them).
+What am I going to show you in this part is [the final test](finaltest.s) and its result.
+The finaltest.s is an assembly code written in RISCV assembly language and the [finaltest.txt](finaltest.txt) contains the machine code of finaltest.s .
+The [finalTb.sv](finalTb.sv) file will instansiate a RISCV-multi-cycle processor and let the processor to run and calculate the result. If the final result indecated that 4096 should be written at address 252 then the test will pass, otherwise it fails.
+![Final test 1](images/extended/finalTest1.png)
+![Final test 2](images/extended/finalTest2.png)
+![Final test 3](images/extended/finalTest3.png)
+![Final test 4](images/extended/finalTest4.png)
+![Final test 5](images/extended/finalTest5.png)
+![Final test terminal message](images/extended/finalTestSec.png)
