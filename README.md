@@ -23,7 +23,7 @@ These pictures are representing the basic version of the processor. The basic ve
 [flopenr](flopenr.sv), [flopr](flopr.sv), [regFile](regFile.sv), [extend unit](extend.sv), [3 input multiplexer](mux3.sv), [4 input result mux](mux4.sv), [2 input mux](mux2.sv), [alu](alu.sv).
 You can also see the extended schematic of data path :
 
-![Extended data path](images/extended/data path extended.png)
+![Extended data path](images/extended/data_path_extended.png)
 
 all the components shown is in the picture below which states an abstraction scheme of our multi-cycles RISCV processor:
 ![Abstraction image](images/extended/luiDataPath.png)
