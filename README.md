@@ -14,3 +14,7 @@ As you can see, it contains a Data path which should carry the data from memory 
 And also this module contains a control unit, which interprets instructions and move on its state machine in order to valuate the control signals so that the Data path works correctly.
 In oder words, control unit controls the data path.
 ![processor module code](/images/riscV_MultiCycle.png)
+## The Data Path module:
+![The Data Path module schematic](/images/multi4.png)
+The Data path module contains register file, alu, extend unit, next pc register, old pc register, instruction register, data register, result multiplexer ..., all the components shown in the picture below which states an abstraction scheme of our multi-cycles RISCV processor:
+![Abstraction image](/images/extend/luiDataPath.png)
