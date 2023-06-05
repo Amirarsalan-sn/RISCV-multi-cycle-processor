@@ -17,4 +17,4 @@ In oder words, control unit controls the data path.
 ## The Data Path module:
 ![The Data Path module schematic](/images/multi4(datapath).png)
 The Data path module contains register file, alu, extend unit, next pc register, old pc register, instruction register, data register, result multiplexer ..., all the components shown in the picture below which states an abstraction scheme of our multi-cycles RISCV processor:
-![Abstraction image](/images/extend/luiDataPath.png)
+![Abstraction image](images/extended/luiDataPath.png)
